@@ -21,10 +21,10 @@ public class RabbitMQConfig {
         return new TopicExchange(NOTIFICATION_EXCHANGE, true, false);
     }
 
-    @Bean
-    public Queue notificationQueue() {
+    @Bean    public Queue notificationQueue() {
         return new Queue(NOTIFICATION_QUEUE, true);
     }
+
 
     @Bean
     public Binding notificationBinding(@Qualifier("notificationQueue") Queue notificationQueue, TopicExchange notificationExchange) {

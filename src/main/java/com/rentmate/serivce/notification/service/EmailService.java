@@ -19,12 +19,12 @@ public class EmailService {
         this.templateEngine = templateEngine;
     }
 
-    public void sendEmail(String to, String subjectFile, String templateName, Map<String, Object> data) {
+    public void sendEmail(String to, String templateName, Map<String, Object> data) {
         try {
             String subject = new String(
-                    getClass().getResourceAsStream("/static/" + subjectFile + ".subject").readAllBytes()
+                    getClass().getResourceAsStream("/static/" + templateName + ".subject").readAllBytes()
             );
-
+            templateName += "html";
             Context context = new Context();
             context.setVariables(data);
             String htmlBody = templateEngine.process(templateName, context);

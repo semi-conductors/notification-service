@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>New Delivery Assigned</title>
+</head>
+<body>
+
+<p>You have been assigned a new delivery task!</p>
+
+<table>
+    <tr>
+        <td><strong>Delivery ID:</strong></td>
+        <td th:text="${deliveryId}">12345</td>
+    </tr>
+    <tr>
+        <td><strong>Order ID:</strong></td>
+        <td th:text="${orderId}">98765</td>
+    </tr>
+    <tr>
+        <td><strong>From:</strong></td>
+        <td th:text="${from}">123 Main St</td>
+    </tr>
+    <tr>
+        <td><strong>To:</strong></td>
+        <td th:text="${to}">456 Elm St</td>
+    </tr>
+    <tr>
+        <td><strong>Delivery Type:</strong></td>
+        <td th:text="${deliveryType}">Forward</td>
+    </tr>
+    <tr>
+        <td><strong>Expected Delivery Time:</strong></td>
+        <td th:text="${expectedDeliveryTime}">Tomorrow 10:00 AM</td>
+    </tr>
+</table>
+
+<p>Please make sure to complete the delivery on time.</p>
+
+<p>— The Delivery Team</p>
+</body>
+</html>

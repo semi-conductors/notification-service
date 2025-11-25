@@ -18,7 +18,6 @@ public class NotificationListener {
         try {
             emailService.sendEmail(
                     event.getEmail(),
-                    event.getSubjectFile(),
                     event.getEventType(),
                     event.getParams()
             );
