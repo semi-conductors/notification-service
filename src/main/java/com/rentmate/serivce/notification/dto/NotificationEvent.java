@@ -14,10 +14,11 @@ public class NotificationEvent{
     }
 
     public String getEmail(){
-        RestTemplate rest = new RestTemplate();
-        String url = "http://localhost:8080/users/{id}/email";
-        String email = rest.getForObject(url, String.class, userId);
-        return email;
+        return "forworknoelse@gmail.com";
+//        RestTemplate rest = new RestTemplate();
+//        String url = "http://localhost:8080/users/{id}/email";
+//        String email = rest.getForObject(url, String.class, userId);
+//        return email;
     }
     public void setEventType(String type) {
         this.eventType = type;

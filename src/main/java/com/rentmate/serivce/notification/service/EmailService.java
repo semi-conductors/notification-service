@@ -24,7 +24,7 @@ public class EmailService {
             String subject = new String(
                     getClass().getResourceAsStream("/static/" + templateName + ".subject").readAllBytes()
             );
-            templateName += "html";
+            templateName += ".html";
             Context context = new Context();
             context.setVariables(data);
             String htmlBody = templateEngine.process(templateName, context);
